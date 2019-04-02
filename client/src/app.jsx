@@ -8,7 +8,7 @@ class App extends React.Component {
         return (
             <Router>
                 <React.Fragment>
-                    <Route path='/lime-service' exact component={() => (<div>Hello React</div>)} />
+                    <Route path='/' component={() => (<div>Hello React</div>)} />
                 </React.Fragment>
             </Router >
         )
