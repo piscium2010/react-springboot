@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserJSPlugin = require("terser-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
-module.exports = merge(common, {
+module.exports = merge({
     mode: 'production',
     output: {
         publicPath: './'
@@ -40,4 +40,4 @@ module.exports = merge(common, {
             chunkFilename: '[id].[hash].css'
         })
     ]
-});
+}, common);

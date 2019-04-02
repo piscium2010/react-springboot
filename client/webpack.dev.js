@@ -3,7 +3,7 @@ const common = require('./webpack.common');
 const webpack = require('webpack');
 const merge = require('webpack-merge')
 
-module.exports = merge(common, {
+module.exports = merge({
     mode: 'development',
     output: {
         publicPath: '/'
@@ -26,4 +26,4 @@ module.exports = merge(common, {
         new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin()
     ]
-});
+}, common);
